@@ -82,7 +82,16 @@ git clone https://github.com/AntiNeko/CatBoxForAndroid.git
 
 得到 `app/libs/libcore.aar`
 
-建议提前设置 `$GOPATH`，并安装好 gomobile，否则会自行编译一个 gomobile。
+目前需要使用 [带有 `-cache` 选项的 gomobile](https://github.com/MatsuriDayo/gomobile) 编译，如果 GOPATH 中不存在 gomobile 则会自动下载编译。
+
+#### Dashboard
+
+具体参考以下 Dashboard，也可以用自己喜欢的。
+
+- [MetaCubeX/Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+- [MetaCubeX/metacubexd](https://github.com/MetaCubeX/metacubexd)
+
+把编译好后的文件夹（如 `public` `dist` 等 **`index.html`** 所在的文件夹）重命名为 `Dash-*` （后面的名字自己起），然后把 `Dash-*` 打包为 zip 并命名为 `dashboard.zip`（`zip -r dashboard Dash-* -9`），替换 `app/src/assets/dashboard.zip`，并将 `app/src/assets/dashboard.version.txt` 的版本号加一。
 
 #### apk
 
@@ -98,7 +107,7 @@ echo "sdk.dir=${ANDROID_HOME}" > local.properties
 echo "ndk.dir=${ANDROID_HOME}/ndk/25.0.8775105" >> local.properties
 ```
 
-签名准备（可选，可以编译后再签名）：替换 `release.keystore` 为自己的。
+签名准备（可选，建议编译后再签名）：替换 `release.keystore` 为自己的。
 
 ```shell
 export KEYSTORE_PASS=
@@ -106,7 +115,7 @@ export ALIAS_NAME=
 export ALIAS_PASS=
 ```
 
-以上这只是举例，请勿直接把密码信息放入环境变量，建议在编译后自行签名。
+以上这只是举例，实际使用请勿直接把密码信息放入环境变量，建议在编译后自行签名。
 
 下载 geo 资源文件：
 
@@ -136,4 +145,5 @@ Android GUI:
 
 Web Dashboard:
 
-- [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+- [MetaCubeX/Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+- [MetaCubeX/metacubexd](https://github.com/MetaCubeX/metacubexd)

@@ -140,19 +140,19 @@ func extractAssetName(name string, useOfficialAssets bool) error {
 
 	if f, err := asset.Open(apkPrefix + name + ".xz"); err == nil {
 		extractXz(f)
-	} else if f, err := asset.Open("yacd.zip"); err == nil {
+	} else if f, err := asset.Open("dashboard.zip"); err == nil {
 		os.RemoveAll(dstName)
 		extracZip(f, internalAssetsPath)
-		m, err := filepath.Glob(internalAssetsPath + "/Yacd-*")
+		m, err := filepath.Glob(internalAssetsPath + "/Dash-*")
 		if err != nil {
-			return fmt.Errorf("glob Yacd: %v", err)
+			return fmt.Errorf("glob dashboard: %v", err)
 		}
 		if len(m) != 1 {
-			return fmt.Errorf("glob Yacd found %d result, expect 1", len(m))
+			return fmt.Errorf("glob dashboard found %d result, expect 1", len(m))
 		}
 		err = os.Rename(m[0], dstName)
 		if err != nil {
-			return fmt.Errorf("rename Yacd: %v", err)
+			return fmt.Errorf("rename dashboard: %v", err)
 		}
 
 	} // TODO normal file
