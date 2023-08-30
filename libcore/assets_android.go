@@ -80,7 +80,7 @@ func extractAssetName(name string, useOfficialAssets bool) error {
 
 	var doExtract bool
 
-	if _, err := os.Stat(dstName); err != nil {
+	if _, err := os.Stat(dstName); err != nil || name == dashDstFolder {
 		// assetFileMissing
 		doExtract = true
 	} else if useOfficialAssets || !replaceable {
