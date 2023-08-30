@@ -26,7 +26,7 @@ func extractAssets() {
 
 	extract(geoipDat)
 	extract(geositeDat)
-	extract(yacdDstFolder)
+	extract(dashDstFolder)
 }
 
 // 这里解压的是 apk 里面的
@@ -44,8 +44,8 @@ func extractAssetName(name string, useOfficialAssets bool) error {
 	case geositeDat:
 		version = geositeVersion
 		apkPrefix = apkAssetPrefixSingBox
-	case yacdDstFolder:
-		version = yacdVersion
+	case dashDstFolder:
+		version = dashVersion
 		replaceable = false
 	}
 
