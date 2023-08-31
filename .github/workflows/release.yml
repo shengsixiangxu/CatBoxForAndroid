@@ -86,7 +86,7 @@ jobs:
           key: ${{ hashFiles('.github/workflows/*', 'golang_status', 'libcore_status') }}
       - name: Clean dashboard
         run: |
-          rm app/src/main/assets/dashboard.zip
+          rm app/src/main/assets/dashboard.zip || true
       - name: Download Dashboard
         uses: actions/download-artifact@v3
         with:
