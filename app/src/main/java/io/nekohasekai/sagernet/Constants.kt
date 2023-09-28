@@ -79,6 +79,8 @@ object Key {
     const val SERVER_METHOD = "serverMethod"
     const val SERVER_PASSWORD1 = "serverPassword1"
 
+    const val PROTOCOL_VERSION = "protocolVersion"
+
     const val SERVER_PROTOCOL = "serverProtocol"
     const val SERVER_OBFS = "serverObfs"
 
@@ -106,19 +108,16 @@ object Key {
     const val SERVER_DOWNLOAD_SPEED = "serverDownloadSpeed"
     const val SERVER_STREAM_RECEIVE_WINDOW = "serverStreamReceiveWindow"
     const val SERVER_CONNECTION_RECEIVE_WINDOW = "serverConnectionReceiveWindow"
-    const val SERVER_MTU = "serverMTU"
     const val SERVER_DISABLE_MTU_DISCOVERY = "serverDisableMtuDiscovery"
     const val SERVER_HOP_INTERVAL = "hopInterval"
 
     const val SERVER_PRIVATE_KEY = "serverPrivateKey"
-    const val SERVER_LOCAL_ADDRESS = "serverLocalAddress"
     const val SERVER_INSECURE_CONCURRENCY = "serverInsecureConcurrency"
 
     const val SERVER_UDP_RELAY_MODE = "serverUDPRelayMode"
     const val SERVER_CONGESTION_CONTROLLER = "serverCongestionController"
     const val SERVER_DISABLE_SNI = "serverDisableSNI"
     const val SERVER_REDUCE_RTT = "serverReduceRTT"
-    const val SERVER_FAST_CONNECT = "serverFastConnect"
 
     const val ROUTE_NAME = "routeName"
     const val ROUTE_DOMAIN = "routeDomain"

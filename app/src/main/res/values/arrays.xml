@@ -358,6 +358,7 @@
     <string-array name="rules_dat_provider">
         <item>@string/route_rules_official</item>
         <item>Loyalsoldier (soffchen/sing-geosite)</item>
+        <item>Chocolate4U/Iran-sing-box-rules</item>
     </string-array>
 
     <string-array name="balancer_type">
@@ -384,6 +385,11 @@
         <item>@string/plugin_disabled</item>
         <item>STRING</item>
         <item>BASE64</item>
+    </string-array>
+
+    <string-array name="hysteria_version">
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
     <string-array name="tuic_version">
