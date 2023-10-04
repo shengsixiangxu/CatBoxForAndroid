@@ -60,7 +60,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/pin_cert_server_hint"
+                            android:text="@string/get_cert_server_hint"
                             android:textAppearance="?attr/textAppearanceSubtitle2" />
 
                         <EditText
