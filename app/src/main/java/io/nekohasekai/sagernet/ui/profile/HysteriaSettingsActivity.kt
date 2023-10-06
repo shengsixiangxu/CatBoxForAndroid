@@ -35,6 +35,8 @@ class HysteriaSettingsActivity : ProfileSettingsActivity<HysteriaBean>() {
         DataStore.serverConnectionReceiveWindow = connectionReceiveWindow
         DataStore.serverDisableMtuDiscovery = disableMtuDiscovery
         DataStore.serverHopInterval = hopInterval
+        DataStore.ech = ech
+        DataStore.echCfg = echCfg
     }
 
     override fun HysteriaBean.serialize() {
@@ -56,6 +58,8 @@ class HysteriaSettingsActivity : ProfileSettingsActivity<HysteriaBean>() {
         connectionReceiveWindow = DataStore.serverConnectionReceiveWindow
         disableMtuDiscovery = DataStore.serverDisableMtuDiscovery
         hopInterval = DataStore.serverHopInterval
+        ech = DataStore.ech
+        echCfg = DataStore.echCfg
     }
 
     override fun PreferenceFragmentCompat.createPreferences(
@@ -90,6 +94,8 @@ class HysteriaSettingsActivity : ProfileSettingsActivity<HysteriaBean>() {
                     false
                 findPreference<SwitchPreference>(Key.SERVER_DISABLE_MTU_DISCOVERY)!!.isVisible =
                     false
+                //
+                authPayload.title = resources.getString(R.string.password)
             } else {
                 authType.isVisible = true
                 authPayload.isVisible = true
@@ -103,6 +109,8 @@ class HysteriaSettingsActivity : ProfileSettingsActivity<HysteriaBean>() {
                     true
                 findPreference<SwitchPreference>(Key.SERVER_DISABLE_MTU_DISCOVERY)!!.isVisible =
                     true
+                //
+                authPayload.title = resources.getString(R.string.hysteria_auth_payload)
             }
         }
         findPreference<SimpleMenuPreference>(Key.PROTOCOL_VERSION)!!.setOnPreferenceChangeListener { _, newValue ->
