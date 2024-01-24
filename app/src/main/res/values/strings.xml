@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">嘤嘤Box</string>
-    <string name="app_name_long" translatable="false">CatBox for Android</string>
+    <string name="app_name" translatable="false">WSPN</string>
+    <string name="app_name_long" translatable="false">WSPN for Android</string>
     <string name="app_desc">The universal proxy toolchain for Android, written in Kotlin.</string>
     <string name="project">Project</string>
     <string name="github">Source code</string>
